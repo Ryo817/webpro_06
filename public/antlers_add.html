@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>選手を追加する</title>
+</head>
+<body>
+    <h2>鹿島アントラーズ 選手追加</h2>
+    <form action="/antlers_add">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" required>
+        <label for="number">背番号</label>
+        <input type="number" name="number" id="number" required>
+        <label for="name">選手名</label>
+        <input type="text" name="name" id="name" required>
+        <input type="submit" value="登録">
+    </form>
+    <a href="/antlers">選手一覧を見る</a>
+</body>
+</html>

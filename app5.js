@@ -71,6 +71,14 @@ let antlers = [
 app.get("/antlers", (req, res) => {
   res.render('antlers', { data: antlers });
 });
+app.get("/antlers_add", (req, res) => {
+  let id = req.query.id;
+  let number = req.query.number;
+  let name = req.query.name;
+  let newdata = { id: id, number: number, name: name };
+  antlers.push( newdata );
+  res.redirect('/public/antlers_add.html');
+});
 
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
