@@ -36,6 +36,41 @@ app.get("/keiyo_add", (req, res) => {
   station.push( newdata );
   res.redirect('/public/keiyo_add.html');
 });
+let antlers = [
+  { id:1,  number:1,  name:"早川友基"},
+  { id:2,  number:21, name:"山田大樹"},
+  { id:3,  number:29, name:"梶川裕嗣"},
+  { id:4,  number:31, name:"藤井陽登"},
+  { id:5,  number:2,  name:"安西幸輝"},
+  { id:6,  number:3,  name:"キム・テヒョン"},
+  { id:7,  number:4,  name:"千田海人"},
+  { id:8,  number:5,  name:"関川郁万"},
+  { id:9,  number:7,  name:"小川諒也"},
+  { id:10, number:23, name:"津久井佳祐"},
+  { id:11, number:25, name:"小池龍太"},
+  { id:12, number:28, name:"大川佑梧"},
+  { id:13, number:35, name:"元砂晏翔仁ウデンバ"},
+  { id:14, number:37, name:"広瀬陸斗"},
+  { id:15, number:55, name:"植田直通"},
+  { id:16, number:6,  name:"三竿健斗"},
+  { id:17, number:8,  name:"マテウス・ブエノ"},
+  { id:18, number:10, name:"柴崎岳"},
+  { id:19, number:14, name:"樋口雄太"},
+  { id:20, number:24, name:"林晴己"},
+  { id:21, number:27, name:"松村優太"},
+  { id:22, number:9,  name:"レオ・セアラ"},
+  { id:23, number:11, name:"田川亨介"},
+  { id:24, number:17, name:"エウベル"},
+  { id:25, number:18, name:"ヤン・マテウス"},
+  { id:26, number:30, name:"吉田湊海"},
+  { id:27, number:34, name:"徳田誉"},
+  { id:28, number:40, name:"鈴木優磨"},
+  { id:29, number:77, name:"チャヴリッチ"},
+];
+
+app.get("/antlers", (req, res) => {
+  res.render('antlers', { data: antlers });
+});
 
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>鹿島アントラーズ</title>
+</head>
+<body>
+  <h2>鹿島アントラーズ 選手一覧</h2>
+  <table>
+    <tr><th>ID</th><th>背番号</th><th>選手名</th></tr>
+    <% for( let row of data ) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.number %></td>
+        <td><%= row.name %></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>
